@@ -1,0 +1,277 @@
+@charset "utf-8";
+@import url("font/Avenir_Next/stylesheet.css");
+@import url("font/Avant_Garde/stylesheet.css");
+
+
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #1C75BC;
+    max-width: 120rem;
+    margin: 0 auto;
+    color: snow;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 5rem;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    gap: 0.5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.logo {
+    max-height: 3rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    /*list-style-type: circle;*/
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.lista {
+    list-style-type: circle;
+    padding-left: 3rem;
+    text-align: left;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+header {
+    background-color: #1C75BC;
+    grid-area: header;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.header {
+    font-family: "Avenir Garde";
+    font-size: 2.5rem;
+}
+
+h2 {
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+main {
+    border-radius: 2rem;
+    font-family: "Avenir Next";
+    background-color: snow;
+    grid-area: main;
+}
+
+.descripcion {
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+#preguntas {
+    display: flex;
+    justify-content: space-around;
+}
+
+.preguntas {
+    width: 30rem;
+    border: 0.1rem solid #252442;
+    border-radius: 2rem;    
+    box-shadow: 1rem 1rem 1rem grey;
+    padding: 2rem;
+    margin: 2rem;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.borde-redondeado {
+    border-radius: 5rem;   
+}
+
+.borde-redondo {
+    border-radius: 10rem;   
+}
+
+.pregunta {
+    margin: 0rem 0rem 1rem 0rem;
+}
+
+.respuesta {
+    margin: 1rem 0rem 0rem 0rem;
+}
+
+.botonSiNo {
+    width: 25rem;
+    height: 3rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 1rem;    
+    background-color: #00A79D;
+    opacity: 0.75;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: snow;
+}
+
+.botonSiNoPressed {
+    opacity: 1;
+}
+
+.disparador {
+    color: black;
+    font-size: 2rem;
+    padding: 1rem;
+    gap: 0.5rem;
+    text-align: center;
+}
+
+#datos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem;
+}
+
+.datos {
+    width: 50rem;
+    color: black;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#avance {
+    display: flex;
+    justify-content: space-around;
+}
+
+#gracias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.imagengracias {
+    max-width: 50rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.textogracias {
+    width: 40rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.gracias {
+    color:#252442;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.avance {
+    width: 30rem;
+    border: 0.1rem solid #252442;
+    border-radius: 0.5rem;    
+    box-shadow: 1rem 1rem 1rem grey;
+    margin: 1rem;
+    padding: 0.1rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.avanceHecho {
+    width: 1%;
+    border-radius: 0.5rem 0 0 0.5rem;
+    background-color: #85DE8E;
+    color: #85DE8E;
+}
+
+.avanceFaltante {
+    background-color: snow;
+    color: snow;
+}
+
+.gancho {
+    background: linear-gradient(to right, #1C75BC, #00AEEF, #1C75BC);
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+footer {
+    background: linear-gradient(to right, #1C75BC, #00AEEF, #1C75BC);
+    grid-area: footer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;    
+}
+
+.copyright {
+    font-size: 1.5rem;
+}
+
+.aclaracion {
+    font-size: 1rem;
+}
+
+.media-icon {
+    max-width: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        grid-template-rows: 10rem 1fr 5rem;
+    }
+    h2 {
+        display:block;
+    }
+    .logo {
+        max-width: 20rem;
+    }   
+}
